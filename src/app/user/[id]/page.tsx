@@ -33,11 +33,11 @@ export default function User ({ params: { id } } : UserPageTypes) {
     return (
         <>
             { user && (
-                <div className='min-h-screen px-40 py-52 grid place-items-center'>
+                <div className='min-h-screen px-8 py-12 md:px-40 md:py-52 grid place-items-center'>
                     <Link href='..' className='bg-white rounded-xl p-12'>
-                        <div className="flex gap-6">
-                            <div className="rounded-full overflow-hidden">
-                                <img src={user.avatar} alt={`${user.first_name} ${user.last_name}`} />
+                        <div className="flex gap-6 flex-col md:flex-row">
+                            <div className="flex items-center justify-center">
+                                <img className="rounded-full" src={user.avatar} alt={`${user.first_name} ${user.last_name}`} />
                             </div>
                             <div className="pt-4">
                                 <p>ID: {user.id}</p>

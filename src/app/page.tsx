@@ -34,8 +34,8 @@ export default function Home() {
   }
 
   return (
-    <div className='min-h-screen px-40 py-52 '>
-      <div className='grid place-items-center grid-cols-3 gap-12'>
+    <div className='min-h-screen px-8 py-12 md:px-40 md:py-52'>
+      <div className='grid place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12'>
         {users && users.map(user => (
           <User key={user.id} id={user.id} email={user.email} first_name={user.first_name} last_name={user.last_name} avatar={user.avatar} />
         ))}
